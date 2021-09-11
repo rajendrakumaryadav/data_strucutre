@@ -34,5 +34,5 @@ runDoubleLinkedList: ./bin/doubleLinkedList | doubleLinkedList
 runDoubleAtHead: ./bin/doubleAddAtHead doubleAddatHead
 	-./bin/doubleAddAtHead
 
-runsearchInList: ./bin/searchInList | create
+runsearchInList: searchInList ./bin/searchInList | create
 	-./bin/searchInList
