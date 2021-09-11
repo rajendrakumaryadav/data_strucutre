@@ -3,17 +3,20 @@ CC=gcc
 FLAGS=-g
 OUTPUT=${PROJECT}
 SRC=./src/main.c ./src/searchNode.c ./src/header.h
-
+ 
 ${PROJECT}: ${SRC} | create
 	${CC} ${FLAGS} -o ./bin/${PROJECT} ${SRC}
 
 doubleLinkedList: ./src/doubleLinkedList.c | create
 	${CC} ${FLAGS} -o ./bin/doubleLinkedList ./src/doubleLinkedList.c
 
-doubleAddatHead: ./src/doubleLinkedList_AddatHead.c
+doubleAddatHead: ./src/doubleLinkedList_AddatHead.c | create
 	${CC} -o ./bin/doubleAddAtHead ./src/doubleLinkedList_AddatHead.c
 
-all: ${PROJECT} doubleLinkedList doubleAddatHead
+searchInList: ./src/searchintoDoubly.c | create
+	${CC} -o ./bin/searchInList ./src/searchintoDoubly.c
+
+all: ${PROJECT} doubleLinkedList doubleAddatHead searchInList | create
 
 create: 
 	-mkdir -p ./bin
@@ -30,3 +33,6 @@ runDoubleLinkedList: ./bin/doubleLinkedList | doubleLinkedList
 
 runDoubleAtHead: ./bin/doubleAddAtHead doubleAddatHead
 	-./bin/doubleAddAtHead
+
+runsearchInList: ./bin/searchInList | create
+	-./bin/searchInList
