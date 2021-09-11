@@ -7,6 +7,9 @@ SRC=./src/main.c ./src/searchNode.c ./src/header.h
 ${PROJECT}: ${SRC} | create
 	${CC} ${FLAGS} -o ./bin/${PROJECT} ${SRC}
 
+doubleLinkedList: ./src/doubleLinkedList.c | create
+	${CC} ${FLAGS} -o ./bin/doubleLinkedList ./src/doubleLinkedList.c
+
 create: 
 	-mkdir -p ./bin
 
@@ -16,3 +19,6 @@ remove: ./bin
 
 run: ./bin/${PROJECT}
 	-./bin/${OUTPUT}
+
+runDoubleLinkedList: ./bin/doubleLinkedList | doubleLinkedList
+	-./bin/doubleLinkedList
