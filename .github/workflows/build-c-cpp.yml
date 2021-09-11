@@ -15,5 +15,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: make
         run: make
+      - name: print message
+        run: echo "Building Doubly-linked-list"
+      - name: make doubleLinkedList
+        run: make doubleLinkedList
       - name: make run
         run: make run
+      - name: Running doubly-linked-list
+        run: make runDoubleLinkedList
