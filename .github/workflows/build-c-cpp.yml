@@ -23,3 +23,9 @@ jobs:
         run: make run
       - name: Running doubly-linked-list
         run: make runDoubleLinkedList
+      - name: print message
+      - run: echo "Building Doubly-Linked_list Add at First"
+      - name: make doubleAddatHead
+      - run: make doubleAddatHead
+      - name: run runDoubleAtHead
+      - run: make runDoubleAtHead
