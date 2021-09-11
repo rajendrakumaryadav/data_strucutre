@@ -29,3 +29,5 @@ jobs:
         run: make doubleAddatHead
       - name: run runDoubleAtHead
         run: make runDoubleAtHead
+      - name: run searchintoDoubleLinkedList
+        run: make runsearchInList
