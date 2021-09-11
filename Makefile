@@ -10,6 +10,11 @@ ${PROJECT}: ${SRC} | create
 doubleLinkedList: ./src/doubleLinkedList.c | create
 	${CC} ${FLAGS} -o ./bin/doubleLinkedList ./src/doubleLinkedList.c
 
+doubleAddatHead: ./src/doubleLinkedList_AddatHead.c
+	${CC} -o ./bin/doubleAddAtHead ./src/doubleLinkedList_AddatHead.c
+
+all: ${PROJECT} doubleLinkedList doubleAddatHead
+
 create: 
 	-mkdir -p ./bin
 
@@ -22,3 +27,6 @@ run: ./bin/${PROJECT}
 
 runDoubleLinkedList: ./bin/doubleLinkedList | doubleLinkedList
 	-./bin/doubleLinkedList
+
+runDoubleAtHead: ./bin/doubleAddAtHead doubleAddatHead
+	-./bin/doubleAddAtHead
