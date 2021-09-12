@@ -16,6 +16,9 @@ doubleAddatHead: ./src/doubleLinkedList_AddatHead.c | create
 searchInList: ./src/searchintoDoubly.c | create
 	${CC} -o ./bin/searchInList ./src/searchintoDoubly.c
 
+stack: ./src/stack.c | create
+	${CC} -o ./bin/stack ./src/stack.c
+
 all: ${PROJECT} doubleLinkedList doubleAddatHead searchInList | create
 
 create: 
@@ -36,3 +39,6 @@ runDoubleAtHead: ./bin/doubleAddAtHead doubleAddatHead
 
 runsearchInList: searchInList ./bin/searchInList | create
 	-./bin/searchInList
+
+runstack: stack ./bin/stack
+	-./bin/stack
