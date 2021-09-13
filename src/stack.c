@@ -10,6 +10,7 @@ void push(int val) {
         arr[top] = val;
     }
 }
+void pop() {}
 int main() {
     push(10);
     push(20);
