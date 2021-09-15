@@ -3,7 +3,7 @@ CC=gcc
 FLAGS=-g
 OUTPUT=${PROJECT}
 SRC=./src/main.c ./src/searchNode.c ./src/header.h
- 
+
 ${PROJECT}: ${SRC} | create
 	${CC} ${FLAGS} -o ./bin/${PROJECT} ${SRC}
 
@@ -19,7 +19,10 @@ searchInList: ./src/searchintoDoubly.c | create
 stack: ./src/stack.c | create
 	${CC} -o ./bin/stack ./src/stack.c
 
-all: ${PROJECT} doubleLinkedList doubleAddatHead searchInList | create
+LinearSearch: ./src/linear_search.c | create
+	${CC} -o ./bin/linear_search ./src/linear_search.c
+
+all: ${PROJECT} doubleLinkedList doubleAddatHead searchInList LinearSearch | create
 
 create: 
 	-mkdir -p ./bin
@@ -40,5 +43,8 @@ runDoubleAtHead: ./bin/doubleAddAtHead doubleAddatHead
 runsearchInList: searchInList ./bin/searchInList | create
 	-./bin/searchInList
 
-runstack: stack ./bin/stack
+runstack: stack 
 	-./bin/stack
+
+runLinearSearch: LinearSearch
+	-./bin/linear_search
