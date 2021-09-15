@@ -33,3 +33,5 @@ jobs:
         run: make runsearchInList
       - name: run StackBuild
         run: make runstack
+      - name: run Linear_Search
+        run: make runLinearSearch
