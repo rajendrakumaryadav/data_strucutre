@@ -31,9 +31,9 @@ int main()
 
     if (LinearSearch(pageNumbers, key) == 1)
 
-        printf("Key %d is found!", key);
+        printf("Key {%d} is found!", key);
     else
-        printf("Key %d is not exists!", key);
+        printf("Key {%d} is not exists!", key);
 
     printf("\n");
 

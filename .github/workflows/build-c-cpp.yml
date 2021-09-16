@@ -35,3 +35,5 @@ jobs:
         run: make runstack
       - name: run Linear_Search
         run: make runLinearSearch
+      - name: run BinarySearch [Time-Complexity log2(n)]
+        run: make runBinarySearch

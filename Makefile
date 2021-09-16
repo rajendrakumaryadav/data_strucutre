@@ -22,7 +22,10 @@ stack: ./src/stack.c | create
 LinearSearch: ./src/linear_search.c | create
 	${CC} -o ./bin/linear_search ./src/linear_search.c
 
-all: ${PROJECT} doubleLinkedList doubleAddatHead searchInList LinearSearch | create
+binarySearch: ./src/binary_search.c | create
+	${CC} -g -o ./bin/binary_search ./src/binary_search.c
+
+all: ${PROJECT} doubleLinkedList doubleAddatHead searchInList LinearSearch binarySearch | create
 
 create: 
 	-mkdir -p ./bin
@@ -48,3 +51,6 @@ runstack: stack
 
 runLinearSearch: LinearSearch
 	-./bin/linear_search
+
+runBinarySearch: binarySearch
+	-./bin/binary_search
