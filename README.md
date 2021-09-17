@@ -1,6 +1,6 @@
-# Data Structure of UG Level Student
+### Data Structure of UG Level Student
 
-[Project Build Status] : [![.github/workflows/build-c-cpp.yml](https://github.com/rajendrakumaryadav/data_strucutre/actions/workflows/build-c-cpp.yml/badge.svg?branch=main)](https://github.com/rajendrakumaryadav/data_strucutre/actions/workflows/build-c-cpp.yml)
+[![.github/workflows/build-c-cpp.yml](https://github.com/rajendrakumaryadav/data_strucutre/actions/workflows/build-c-cpp.yml/badge.svg?branch=main)](https://github.com/rajendrakumaryadav/data_strucutre/actions/workflows/build-c-cpp.yml)
 
 - Data Structure and Simple Algorithm Programming using C.
 - Learning Data Structure and algorithms is always Great.
@@ -13,4 +13,4 @@ Algorithms + Data Structures = Programs
 - It will always help you to work in Programming.
 - Good for the students in India into their UG Level Courses for Different universities.
 
-# data_strucutre
+**Happy coding from India :+1:**
