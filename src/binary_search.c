@@ -44,8 +44,10 @@ int main()
 	int key = 20;
 	printData(data);
 	printMessage(binary_search(data, key, 0, SIZE), key);
-	printMessage(binary_search(data, 66, 0, SIZE), 66);
-	printMessage(binary_search(data, 23, 0, SIZE), 23);
+	key = 66;
+	printMessage(binary_search(data, key, 0, SIZE), key);
+	key = 23;
+	printMessage(binary_search(data, key, 0, SIZE), key);
 	printf("\n");
 	return 0;
 }
