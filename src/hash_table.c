@@ -14,7 +14,7 @@ int insert(int value)
 {
 	int key = value % HASHSIZE;
 	int index = key;
-
+	// validating & handling collision
 	while (arr[index] != -1) {
 		index = (index + 1) % HASHSIZE;
 		if (index == key) {
@@ -34,6 +34,7 @@ int delete (int value)
 {
 	int key = value % HASHSIZE;
 	int index = key;
+	// validating & handling collision
 	while (arr[index] != value) {
 		index = (index + 1) % HASHSIZE;
 		if (index == key)
@@ -68,6 +69,5 @@ int main()
 	} else {
 		printf("Data not found in hash_table!\n");
 	}
-
 	return EXIT_SUCCESS;
 }
