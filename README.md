@@ -1,4 +1,4 @@
-### Data Structure of UG Level Student
+#### Data Structure of UG Level Student
 
 [![.github/workflows/build-c-cpp.yml](https://github.com/rajendrakumaryadav/data_strucutre/actions/workflows/build-c-cpp.yml/badge.svg?branch=main)](https://github.com/rajendrakumaryadav/data_strucutre/actions/workflows/build-c-cpp.yml)
 
