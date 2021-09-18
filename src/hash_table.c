@@ -44,30 +44,55 @@ int delete (int value)
 	return 1;
 }
 
+int search(int value)
+{
+	int key = value % HASHSIZE;
+	int index = key;
+
+	while (arr[index] != value) {
+		index = (index + 1) % value;
+		if (index == key)
+			return 0;
+	}
+	return 1;
+}
+void printFoundOrNot(int data, int value)
+{
+	if (data == 1)
+		printf("%d Element is Found!\n", value);
+	else
+		printf("%d Not in HashTable!\n", value);
+}
+
+void printInsertedOrNot(int data, int value)
+{
+	if (data == 1)
+		printf("%d Element is Inserted!\n", value);
+}
+
+void deleteOrNot(int data, int value)
+{
+	if (data == 1)
+		printf("%d Element is deleted!\n", value);
+	else
+		printf("%d Not in HashTable!\n", value);
+}
+
 int main()
 {
 	init();
 
 	int value = 30;
 
-	if (insert(value) == 1) {
-		printf("Data %d added to Table.\n", value);
-	}
+	printInsertedOrNot(insert(value), value);
 	value = 40;
+	printInsertedOrNot(insert(value), value);
 
-	if (insert(value) == 1) {
-		printf("Data %d added to Table.\n", value);
-	}
+	deleteOrNot(delete (value), value);
+	deleteOrNot(delete (1000), 1000);
+	printFoundOrNot(search(1000), 1000);
+	printFoundOrNot(search(40), 40);
+	printFoundOrNot(search(30), 30);
 
-	if (delete (40) == 1) {
-		printf("Data Deleted!\n");
-	} else {
-		printf("Data not found is hash_table!\n");
-	}
-	if (delete (100) == 1) {
-		printf("Data Deleted!\n");
-	} else {
-		printf("Data not found in hash_table!\n");
-	}
 	return EXIT_SUCCESS;
 }
