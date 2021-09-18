@@ -65,6 +65,7 @@ void printFoundOrNot(int data, int value)
 }
 
 void printInsertedOrNot(int data, int value)
+
 {
 	if (data == 1)
 		printf("%d Element is Inserted!\n", value);
