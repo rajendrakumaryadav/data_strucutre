@@ -37,3 +37,5 @@ jobs:
         run: make runLinearSearch
       - name: run BinarySearch [Time-Complexity log2(n)]
         run: make runBinarySearch
+      - name: run HashTable
+        run: make runHashTable

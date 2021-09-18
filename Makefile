@@ -25,6 +25,9 @@ LinearSearch: ./src/linear_search.c | create
 binarySearch: ./src/binary_search.c | create
 	${CC} -g -o ./bin/binary_search ./src/binary_search.c
 
+HashTable: ./src/hash_table.c | create
+	${CC} -o ./bin/hash_table ./src/hash_table.c
+
 all: ${PROJECT} doubleLinkedList doubleAddatHead searchInList LinearSearch binarySearch | create
 
 create: 
@@ -54,3 +57,6 @@ runLinearSearch: LinearSearch
 
 runBinarySearch: binarySearch
 	-./bin/binary_search
+
+runHashTable: HashTable
+	-./bin/hash_table
