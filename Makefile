@@ -33,10 +33,12 @@ all: ${PROJECT} doubleLinkedList doubleAddatHead searchInList LinearSearch binar
 create: 
 	-mkdir -p ./bin
 
+.PHONY: remove
 remove: ./bin
 	-echo "Deleting bin directory!"
 	-rm -rfv ./bin
 
+.PHONY: run
 run: ./bin/${PROJECT}
 	-./bin/${OUTPUT}
 
