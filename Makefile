@@ -28,7 +28,11 @@ binarySearch: ./src/binary_search.c | create
 HashTable: ./src/hash_table.c | create
 	${CC} -o ./bin/hash_table ./src/hash_table.c
 
-all: ${PROJECT} doubleLinkedList doubleAddatHead searchInList LinearSearch binarySearch | create
+chainedHash: ./src/hashes/chained_hash.c | create
+	${CC} -o ./bin/chained_hash ./src/hashes/chained_hash.c
+
+all: ${PROJECT} doubleLinkedList doubleAddatHead searchInList \
+LinearSearch binarySearch chainedHash | create
 
 create: 
 	-mkdir -p ./bin
@@ -62,3 +66,6 @@ runBinarySearch: binarySearch
 
 runHashTable: HashTable
 	-./bin/hash_table
+
+run_chainedHash: chainedHash
+	-./bin/chained_hash
