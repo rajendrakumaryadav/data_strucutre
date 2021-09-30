@@ -51,8 +51,12 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+cmake-build-debug
 /bin/*
+src/Makefile
 /bin
 .vscode/*
 /vscode
 ./vscode
+
+.vscode
