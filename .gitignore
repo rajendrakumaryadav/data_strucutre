@@ -60,3 +60,6 @@ src/Makefile
 ./vscode
 
 .vscode
+cmake-build-debug
+cmake-build-release
+.idea
